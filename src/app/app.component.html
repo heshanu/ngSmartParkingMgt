@@ -1,2 +1,10 @@
-<app-header/>
-<router-outlet />
+<div class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <app-header class="mt-4" />
+  <!-- Main content area (will expand to take up available space) -->
+  <main class="flex-1">
+    <router-outlet /> <!-- Angular will render routed components here -->
+  </main>
+
+  <!-- Footer -->
+</div>
