@@ -6,6 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { LoginComponent } from './login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgprimeModule } from '../ngprime/ngprime.module';
+import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { NgprimeModule } from '../ngprime/ngprime.module';
     MaterialModule,
     NgprimeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class LoginModule { }

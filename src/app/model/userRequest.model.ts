@@ -1,5 +1,4 @@
 export interface UserRequestInterface {
-  userName: string,
+  emailId: string,
   password: string
-
 }

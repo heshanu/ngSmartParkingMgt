@@ -3,11 +3,11 @@
     <h2 class="text-2xl font-bold text-center">Login</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mt-8 space-y-6">
       <div>
-        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-        <input id="username" formControlName="username" type="text" required
+        <label for="emailId" class="block text-sm font-medium text-gray-700">emailId</label>
+        <input id="emailId" formControlName="emailId" type="text" required
         placeholder="UserName here"
           class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-        <div *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched"
+        <div *ngIf="loginForm.get('emailId')?.hasError('required') && loginForm.get('emailId')?.touched"
           class="text-sm text-red-600">
           Username is required
         </div>
@@ -22,7 +22,7 @@
           Password is required
         </div>
       </div>
-      <div>
+      <!-- <div>
         <label for="loginAs" class="block text-sm font-medium text-gray-700">Login As</label>
         <select id="loginAs" formControlName="loginAs" 
         type="text" required
@@ -35,11 +35,11 @@
           class="text-sm text-red-600">
            User Role is required
         </div>
-      </div>
+      </div> -->
+
       <div>
-        <button type="submit" [disabled]="!loginForm.valid"
-          class="w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          Login
+        <button type="submit" pButton pRipple [disabled]="!loginForm.valid" label="Login"
+          class="w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed">
         </button>
       </div>
     </form>

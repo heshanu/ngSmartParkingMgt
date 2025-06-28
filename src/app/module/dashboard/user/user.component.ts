@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../../service/user.service';
+import { UserRequestInterface } from '../../../model/userRequest.model';
 
 @Component({
   selector: 'app-user',
@@ -8,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
 
+  constructor(private userService: UserService) { }
+
+  loginUser(user: UserRequestInterface) {
+
+  }
 }

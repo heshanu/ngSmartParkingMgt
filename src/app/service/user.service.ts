@@ -11,7 +11,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  loginUser(obj: UserRequestInterface) {
+  loginUser(obj: UserRequestInterface): Observable<UserInterface> {
     return this.http.post<UserInterface>("https://api.freeprojectapi.com/api/BusBooking/login", obj);
   }
 }
